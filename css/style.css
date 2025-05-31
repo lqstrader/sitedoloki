@@ -182,5 +182,99 @@ height: 150px;
 .modal-conteudo {
 width: 95%;
 }
+/* Estilos do Carrossel */
+.carrossel-container {
+    max-width: 700px; /* Ajuste a largura máxima conforme desejado */
+    position: relative;
+    margin: auto;
+    background-color: #f9f9f9; /* Cor de fundo suave para o container */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden; /* Importante para o efeito de slide se for usar transições mais complexas */
+}
+
+.carrossel-slides .slide {
+    display: none; /* Esconde todos os slides por padrão */
+    padding: 10px; /* Pequeno preenchimento ao redor da imagem */
+    box-sizing: border-box;
+}
+
+.carrossel-slides .slide img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 500px; /* Define uma altura máxima para as imagens não ficarem muito grandes */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer, pode cortar um pouco */
+    border-radius: 5px;
+    display: block; /* Remove espaço extra abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem se ela for menor que o contêiner do slide */
+}
+
+/* Legenda da Imagem no Slide */
+.legenda-slide {
+    color: #333;
+    font-size: 15px;
+    padding: 8px 12px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botões de Anterior/Próximo */
+.anterior, .proximo {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -30px; /* Ajuste para centralizar verticalmente com a legenda */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.proximo {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.anterior:hover, .proximo:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Efeito de Fade (pode ser expandido para outros efeitos) */
+.fade {
+    animation-name: fade;
+    animation-duration: 0.8s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Bolinhas de navegação (Dots) */
+.container-dots {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
 }
 
