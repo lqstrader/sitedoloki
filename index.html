@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conheça o Loki</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à página do Lokiiiii! 🐶</h1>
+    </header>
+
+    <main>
+        <section id="galeria">
+            <h2>Galeria de Fotos</h2>
+            <div class="container-galeria">
+                <div class="item-galeria">
+                    <img src="img/cao1.jpg" alt="Loki foto 1" onclick="abrirModal('img/cao1.jpg', 'Loki foto 1')">
+                </div>
+                <div class="item-galeria">
+                    <img src="img/cao2.jpg" alt="Loki foto 2" onclick="abrirModal('img/cao2.jpg', 'Loki foto 2')">
+                </div>
+                <div class="item-galeria">
+                    <img src="img/cao3.jpg" alt="Loki foto 3" onclick="abrirModal('img/cao3.jpg', 'Loki foto 3')">
+                </div>
+		<div class="item-galeria">
+                    <img src="img/cao4.jpg" alt="Loki foto 4" onclick="abrirModal('img/cao4.jpg', 'Loki foto 4')">
+                </div>
+                </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre o Loki</h2>
+            <div class="container-sobre">
+                <div class="sobre-foto">
+                    <img src="img/cao_destaque.jpg" alt="Foto destaque do Loki">
+                </div>
+                <div class="sobre-texto">
+                    <p> O Loki é um Shitzu muito brincalhão e adora passear e fazer bagunça na casa toda. Seu brinquedo favorito é um porco espinho de pelucia e ele não resiste a um petisco!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Feito por nós para o Loki</p>
+    </footer>
+
+    <div id="meuModal" class="modal">
+        <span class="fechar" onclick="fecharModal()">&times;</span>
+        <img class="modal-conteudo" id="imgModal">
+        <div id="legenda"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
